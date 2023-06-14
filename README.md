@@ -48,7 +48,7 @@ JNUMasterThesis v2.0
     > 5) chap1.tex: 第一章。
     > 6) chap2.tex: 第二章。
     > 7) conclusion.tex: 结论。
-    > 8) paper.tex: 攻读学位期间发表的论文。
+    > 8) papers.tex: 攻读学位期间发表的论文。
     > 9) acknowledgement.tex: 致谢。
 4. images目录：图片存放目录。
 
