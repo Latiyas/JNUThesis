@@ -50,7 +50,7 @@ JNUMasterThesis v2.0
     > 7) conclusion.tex: 结论。
     > 8) paper.tex: 攻读学位期间发表的论文。
     > 9) acknowledgement.tex: 致谢。
-4. img目录：图片存放目录。
+4. images目录：图片存放目录。
 
 参考文献格式说明
 --------------------------------------------------------
