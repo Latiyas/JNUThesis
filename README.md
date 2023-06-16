@@ -6,32 +6,31 @@ JNUThesis
 缘起
 --------------------------------------------------------
 又是一年毕业季，辛辛苦苦写好的论文怎么保证格式的排版标准规范一直是令人头疼的问题。
-在学术研究过程中，大家都开始接触并习惯于使用LaTeX进行论文的排版，那么是否也可以借助这个工具撰写毕业论文呢？在暨南大学数据存储与集群计算实验室的Yongtao Zhou学长早已完成了博硕士学位论文LaTex模板，但因为时间久远，加之软件版本不断更替，使用较新的本地LaTeX编译生成PDF文件过程中出现了一些错误往往难以解决。
+在学术研究过程中，大家都开始接触并习惯于使用LaTeX进行论文的排版，那么是否也可以借助这个工具撰写毕业论文呢？暨南大学数据存储与集群计算实验室的Yongtao Zhou学长虽然已完成了博硕士学位论文LaTex模板，但因为时间久远，加之软件版本不断更替，使用较新的本地LaTeX编译生成PDF文件过程中出现了一些错误或警告没有解决。
+同时，由于笔者论文写作经验较浅，一开始接触的便是Overleaf，所以情感上更倾向于在线版的Overleaf。私以为Overleaf存在以下几点优势：a.简洁，高效，省去了配置环境的麻烦；b.可以多人在线，共同编辑同一个文档。因此萌发了将暨南大学博硕士学位论文模板迁移至Overleaf上的念头。
 
-同时，因为笔者写作经验较浅，一开始接触的便是Overleaf，所以情感上更倾向于Overleaf。私以为Overleaf存在以下几点优势：a.简洁，高效，省去了配置环境的麻烦；b.可以多人在线，共同编辑同一个文档。因此萌发了将暨南大学博硕士学位论文模板迁移至Overleaf上的念头。
+本项目的主要工作是将Yongtao Zhou学长的暨南大学博硕士学位论文LaTeX模板迁移至Overleaf，同时根据同学们的反馈对格式继续进行完善。原始项目见[JNUMasterThesis](https://github.com/ytZhou/JNUMasterThesis)，再次感谢Yongtao Zhou学长前期的大量工作。参考文献借鉴了南京大学的Haixing Hu学长的项目，详情见[GBT7714-2005-BibTeX-Style](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)，感谢Haixing Hu学长的工作。
 
-本项目的主要工作是将Yongtao Zhou学长的暨南大学博硕士学位论文LaTeX模板迁移至Overleaf，同时根据同学们的反馈对格式继续进行完善。原始项目见[JNUMasterThesis](https://github.com/ytZhou/JNUMasterThesis)，再次感谢Yongtao Zhou学长前期的大量工作。参考文献借鉴了Haixing Hu学长的模板，详情见[GBT7714-2005-BibTeX-Style](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)，感谢Haixing Hu学长的工作。
-
-本项目虽然侧重于在Overleaf上进行编译测试，但同样支持在本地Latex上的编译。本项目在Overleaf网站上的共享链接为[https://cn.overleaf.com/read/pwvngpvxfxdd](https://cn.overleaf.com/read/pwvngpvxfxdd)，愿意使用Overleaf平台的同学可以直接拷贝项目进行修改。
+本项目虽然侧重于在Overleaf上进行编译测试，但同样能够在本地Latex上的编译通过。由于精力有限，暂时没有余力对本地编译的所有问题一一解决，请有问题的同学自行百度解决。本项目在Overleaf网站上的共享链接为[https://cn.overleaf.com/read/pwvngpvxfxdd](https://cn.overleaf.com/read/pwvngpvxfxdd)，愿意使用Overleaf平台的同学可以直接拷贝项目进行修改。
 
 已修复问题
 --------------------------------------------------------
+2023.05.10更新
+1. 完善了参考文献的格式问题。（感谢Yaju Li同学的帮助）
+
+2023.04.30更新
+1. 增加了书签，方便PDF阅读。
+2. 修正了目录中的章节名称。
+
+2023.04.10更新
+1. 对齐了左右页边距。（感谢Weizhen Xu同学的帮助）
+
 2023.03.17更新
 1. 修正了目录、章节的标题对齐问题。
 2. 修正了参考文献引用问题。
 3. 重新调整了项目的结构。（感谢Yaju Li同学的帮助）
 4. 修正了图、表目录的指引线格式以及图、表注释格式。
 5. 重新调整了字体大小与与段落间距，修正了图表目录名称。（感谢Zhenxin Wu同学的帮助）
-
-2023.04.10更新
-1. 对齐了左右页边距。（感谢Weizhen Xu同学的帮助）
-
-2023.04.30更新
-1. 增加了书签，方便PDF阅读。
-2. 修正了目录中的章节名称。
-
-2023.05.10更新
-1. 完善了参考文献的格式问题。
 
 运行环境
 --------------------------------------------------------
