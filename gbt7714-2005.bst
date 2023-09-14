@@ -122,11 +122,12 @@ FUNCTION {cap.nd.en} 			{"nd"}
 FUNCTION {cap.rd.en} 			{"rd"}
 FUNCTION {cap.th.en} 			{"th"}
 
-FUNCTION {cap.space}      {" "}
-FUNCTION {cap.period} 		{"\@. "}
+FUNCTION {cap.space}            {" "}
+FUNCTION {cap.period} 		    {"\@. "}
 FUNCTION {cap.comma} 			{"\@, "}
 FUNCTION {cap.colon} 			{"\thinspace{}\textnormal{: }"}
 FUNCTION {cap.double.slash} 	{" //\thinspace{}"}
+FUNCTION {cap.endash} 			{"\thinspace{}\textnormal{-}\thinspace{}"}
 FUNCTION {cap.dash} 			{"\thinspace{}\textnormal{--}\thinspace{}"}
 
 % Predefined latex command used to format the style of bibitems
@@ -900,7 +901,7 @@ FUNCTION {get.pages} {                            % String Entry::get_pages() {
   pages contain.dash {                            %   if (contain_dash(this.pages)) {
     pages extract.before.first.dash               %     String p1 = extract_before_first_dash(this.pages);
     pages extract.after.last.dash                 %     String p2 = extract_after_last_dash(this.pages);
-    cap.dash swap$ * *                            %     return p1 + cap_dash + p2;
+    cap.endash swap$ * *                            %     return p1 + cap_endash + p2;
   } {                                             %   } else {
     pages                                         %     return this.pages;
   } if$                                           %   }
