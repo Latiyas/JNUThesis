@@ -24,6 +24,7 @@
 %% 默认算法环境
 \usepackage{algorithm}
 \usepackage{algorithmic}
+% \usepackage{algorithm2e}
 % \usepackage[linesnumbered,ruled,vlined,boxed,commentsnumbered]{algorithm2e}
 %% 常用包
 \usepackage{textcomp, gensymb}
@@ -39,7 +40,6 @@
 \usepackage{makecell}
 \usepackage{rotating}
 \usepackage{booktabs}
-% \usepackage{algorithm2e}
 \usepackage{diagbox}
 \usepackage{booktabs}
 %% 用geometry宏包设置页边距
@@ -100,7 +100,7 @@
 \titlecontents{section}[0pt]{\vspace{0pt}\hspace{1em}\song\xiaosi}
     {\thecontentslabel\hspace{1em}}{}
     {\hspace{0em}\titlerule*[3pt]{$\cdot$}\contentspage}
-\titlecontents{subsection}[0pt]{\vspace{0pt}\song\xiaosi}
+\titlecontents{subsection}[0pt]{\vspace{0pt}\hspace{2em}\song\xiaosi}
     {\thecontentslabel\hspace{1em}}{}
     {\hspace{0em}\titlerule*[3pt]{$\cdot$}\contentspage}
 
@@ -112,7 +112,7 @@
 % \newcommand{\sanhao}{\fontsize{16pt}{24pt}\selectfont}           %% 三号字体
 % \newcommand{\xiaoer}{\fontsize{18pt}{27pt}\selectfont}           %% 小二字体
 % \newcommand{\erhao}{\fontsize{22pt}{30pt}\selectfont}            %% 二号字体
-
+% 
 % %% 目录设置
 % \setcounter{tocdepth}{1}
 % \titlecontents{chapter}[0pt]{\vspace{-15pt}\song\xiaosi}
@@ -146,32 +146,6 @@
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
 \setmonofont{Times New Roman}
-
-\newcommand*\aap{Astronomy \& Astrophysics}
-\let\astap=\aap
-\newcommand*\aaps{American Association of Pharmaceutical Scientists}
-\newcommand*\aj{Astronomical Journal}
-\let\applopt\ao
-\newcommand*\apj{Astrophysical Journal}
-\newcommand*\apjl{Astrophysical Journal Letters}
-\let\apjlett\apjl
-\newcommand*\apjs{Astronomical Journal Supplementary Series}
-\let\apjsupp\apjs
-\newcommand*\aplett{Astrophys.~Lett.}
-\newcommand*\apspr{Astrophys.~Space~Phys.~Res.}
-\newcommand*\apss{Astrophysics and Space Science}
-\newcommand*\caa{Chinese Astron. Astrophys.}
-\newcommand*\cjaa{Chinese J. Astron. Astrophys.}
-\newcommand*\icarus{Icarus}
-\newcommand*\mnras{MNRAS}
-\newcommand*\na{New A}
-\newcommand*\nar{New A Rev.}
-\newcommand*\nat{Nature}
-\newcommand*\pasa{Publications of The Astronomical Society of Australia}
-\newcommand*\pasj{Publications of The Astronomical Society of Japan}
-\newcommand*\pasp{Publications of The Astronomical Society of The Pacific}
-\newcommand*\planss{Planetary and Space Science}
-\newcommand*\ssr{Space Science Reviews}
 
 %% 设置页眉页脚
 \newpagestyle{main}[\wuhao]{
@@ -244,10 +218,13 @@
 \makeatother
 
 
-%% 将文献引用作为上标出现
+%% 将默认文献引用设置为上标出现
 \makeatletter
 \def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
 \makeatother
+%% 重新定义非上标的文献引用
+\newcommand{\norcite}[1]{\scalebox{1.5}[1.5]{\raisebox{-0.75ex}{\cite{#1}}}}
+
 
 %% 修改图表目录的指引线距离
 \makeatletter
@@ -406,7 +383,7 @@ Title： \titleEn \\[25pt]
 %% 暨大参考文献设置
 % \bibliographystyle{thubib}
 % 参考文献设置-GB
-\bibliographystyle{gbt7714-2005}
+\bibliographystyle{gbt7714-2015}
 \bibliography{bib/refs}
 
 %% 致谢

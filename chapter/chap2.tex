@@ -1,7 +1,91 @@
-\chapter{重复数据删除相关技术综述}\thispagestyle{main}
+\chapter{Latex部分代码示例}\thispagestyle{main}
+
+\section{图片}
+
+\subsection{单张图片示例}
+
+\par 注意，图片的标题在下面。
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=2.5in]{images/blackhole.jpeg}
+    \caption{黑洞}
+    \label{fig:blackhole}
+\end{figure}
+图\ref{fig:blackhole2}是黑洞。
+
+\subsection{多张图片示例}
+
+\begin{figure*}[!ht]
+    \centering
+    \subfloat[黑洞1。]{
+        \includegraphics[width = 0.45\textwidth]{images/blackhole.jpeg}
+    }
+    \hfill
+    \subfloat[黑洞2。]{
+        \includegraphics[width = 0.45\textwidth]{images/blackhole.jpeg}
+    }
+    \\
+    \subfloat[黑洞3。]{
+        \includegraphics[width = 0.45\textwidth]{images/blackhole.jpeg}
+    }
+    \hfill
+    \subfloat[黑洞4。]{
+        \includegraphics[width = 0.45\textwidth]{images/blackhole.jpeg}
+    }
+    \caption{黑洞。}
+    \label{fig:blackhole2}
+\end{figure*}
+
+\section{表格}
+
+\par 注意，表格的标题在上面。
+
+\begin{table}[!ht]
+\centering
+\caption{一个表的实例}
+\label{tab:tabobj}
+    \begin{tabular}{cccccc}
+        \toprule
+        序号 & 姓名 & 性别 & 年龄 & 身高/cm & 体重/kg \\
+        \midrule
+        1 & 张三 & M & 16 & 163 & 50 \\
+        2 & 王红 & F & 15 & 159 & 47 \\
+        3 & 李二 & M & 17 & 165 & 52 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\par 表\ref{tab:tabobj}是一个实例。
+
+\section{简单的数学公式和定理}
+
+\begin{sthm}[定理~\thethm~(存在性定理)]
+    $\Gamma\Theta\Lambda\Xi\Pi\alpha\beta\gamma\delta$
+\end{sthm}
+
+\begin{thm}
+\label{thm:alpha}
+    xxxxx
+\end{thm}
+
+\begin{equation}
+\label{eq:alpha}
+    \alpha=\sqrt[n]{\Re}.
+\end{equation}
+\par 定理\ref{thm:alpha}，公式\ref{eq:alpha}。
+
+\section{参考文献}
+
+默认的参考文献引用方法是$\backslash$cite\{\}~\cite{broder1997resemblance,broder1997syntactic}，也可以使用非上标的引用形式$\backslash$norcite\{\}~\norcite{broder1997resemblance}。
+
+
 \section{伪代码实例}
-\begin{algorithm}
-\caption{Algorithm 1}
+
+\subsection{使用algorithmic包}
+
+\begin{algorithm}[!ht]
+\caption{algorithmic示例}
 \begin{algorithmic}[1] %[1] 能够显示行号
     \REQUIRE $n \geq 1$                  %输入条件
     \ENSURE $Sum = 1 + \cdots + n$       %输出
@@ -17,6 +101,26 @@
     \RETURN Sum
 \end{algorithmic}
 \end{algorithm}
+
+% \subsection{使用algorithm2e包}
+
+% \begin{algorithm}[H]
+% \caption{algorithm2e示例}
+%     \SetAlgoLined
+%     \KwData{this text}
+%     \KwResult{how to write algorithm with \LaTeX2e }
+%     initialization\;
+%     \While{not at end of this document}{
+%         read current\;
+%         \eIf{understand}{
+%             go to next section\;
+%             current section becomes this one\;
+%             }{
+%             go back to the beginning of current section\;
+%         }
+%     }
+% \end{algorithm}
+
 % \begin{algorithm}
 % \DontPrintSemicolon
 % \KwData{$G=(X,U)$ such that $G^{tc}$ is an order.}
@@ -48,3 +152,5 @@
 % }
 % \caption{IntervalRestriction\label{IR}}
 % \end{algorithm}
+
+
