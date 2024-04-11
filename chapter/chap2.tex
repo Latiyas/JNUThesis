@@ -1,4 +1,6 @@
-\chapter{Latex部分代码示例}\thispagestyle{main}
+\thispagestyle{main}
+\chapter{Latex部分代码示例}
+\thispagestyle{main}
 
 \section{图片}
 
@@ -60,6 +62,20 @@
 
 \par 表\ref{tab:tabobj}是一个实例。
 
+\section{关于图、表标题的一些应用}
+
+\par 如果在图片、表格的标题中需要用到较长的内容解释结果，或者内容中包含引用，建议使用``$\backslash$caption{<短标题>}{<长标题>}''命令。可选的参数短标题用于图表目录，而长标题中可以进行长达多段的叙述。而标签$\backslash$label需要放在caption后面，或者短标题或长标题中。实际效果如下图所示：
+
+\begin{figure*}[!ht]
+    \centering
+    \includegraphics[width=0.45\textwidth]{example-image}
+    \caption[这是图目录中的标题]{这是正文中图表的标题，也可以正常使用引用\cite{broder1997resemblance}}\label{fig:image}
+    % \caption[这是图目录中的标题]{\label{fig:image}这是正文中图表的标题，也可以使用引用\cite{broder1997resemblance}}
+\end{figure*}
+
+在图~\ref{fig:image}中，引用如果放在了短标题中，会在正文前先对引用进行编号，导致引用排序出现问题，望知晓。
+
+
 \section{简单的数学公式和定理}
 
 \begin{sthm}[定理~\thethm~(存在性定理)]
@@ -76,10 +92,6 @@
     \alpha=\sqrt[n]{\Re}.
 \end{equation}
 \par 定理\ref{thm:alpha}，公式\ref{eq:alpha}。
-
-\section{参考文献}
-
-默认的参考文献引用方法是$\backslash$cite\{\}~\cite{broder1997resemblance,broder1997syntactic}，也可以使用非上标的引用形式$\backslash$norcite\{\}~\norcite{broder1997resemblance}。
 
 
 \section{伪代码实例}
@@ -159,3 +171,7 @@
 
 脚注示例\footnote{这是脚注示例。}。
 
+
+\section{参考文献}
+
+\par 默认的参考文献引用方法是$\backslash$cite\{\}~\cite{broder1997resemblance,broder1997syntactic}，也可以使用非上标的引用形式$\backslash$norcite\{\}~\norcite{broder1997resemblance}。
