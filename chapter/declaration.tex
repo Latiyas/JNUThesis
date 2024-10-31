@@ -1,7 +1,7 @@
 %% 声明页信息来源，需要将个人信息进行填充
 %%-------------------这里定义论文相关信息--------------------
 %% 作者名字
-\newcommand{\authorName}{作者姓名（若是同等学力人员请注明“同等学力申请”，若是港澳台侨及海外留学生请注明申请人生源地）}
+\newcommand{\authorName}{学生姓名（若是同等学力人员请注明“同等学力申请”，若是港澳台侨及海外留学生请注明申请人生源地）}
 %% 论文题目
 \newcommand{\titleCn}{暨南大学硕士学位论文Overleaf模板v1.0}
 \newcommand{\titleEn}{论文英文题目}
@@ -10,16 +10,62 @@
 %% 学科、专业名称
 \newcommand{\disciplineName}{学科\ 专业}
 %% 学位类型
-\newcommand{\degreeType}{(学术学位/专业学位)}
+\newcommand{\degreeType}{学术学位/专业学位}
 %% 论文提交时间
-\newcommand{\commitDate}{2024\ 年\ 6\ 月}
+\newcommand{\commitDate}{2025\ 年\ 6\ 月}
 %% 论文答辩时间
-\newcommand{\replyDate}{2024\ 年\ 6\ 月}
+\newcommand{\replyDate}{2025\ 年\ 6\ 月}
 %% 答辩委员会主席
 \newcommand{\programCoChairs}{委员会主席\ 职称}
 %% 论文评阅人
 \newcommand{\Reviewer}{评阅人名字\ 职称}
 %% 学位论文授予单位日期
-\newcommand{\grantDate}{2024\ 年\ 6\ 月}
+\newcommand{\grantDate}{2025\ 年\ 6\ 月}
 \newcommand{\schoolName}{暨南大学}
 \newcommand{\pageHeaderTitle}{暨南大学硕士学位论文}
+
+%%-------------------标题页--------------------
+\begin{titlepage}
+\begin{flushleft}
+    \zihao{-1}\li\textbf{暨南大学硕士学位论文}
+\end{flushleft}
+\begin{flushleft}
+\vspace{25pt}
+\xiaosan{
+题名： \titleCn \\
+Title： \titleEn \\[25pt]
+作者姓名：\authorName \\[25pt]
+指导教师姓名及学位、职称：\tutor \\[25pt]
+学科、专业名称：\disciplineName \\[25pt]
+学位类型：\degreeType \\[25pt]
+论文提交时间：\commitDate \\[25pt]
+论文答辩时间：\replyDate \\[25pt]
+答辩委员会主席：\programCoChairs \\[25pt]
+论文评阅人：\Reviewer \\[25pt]
+学位授予单位和日期：\schoolName \quad \grantDate \\[25pt]
+}
+\end{flushleft}
+\end{titlepage}
+\thispagestyle{empty}
+
+%%-------------------声明页--------------------
+\begin{titlepage}
+\begin{center}
+    \zihao{2}\song\textbf{独~创~性~声~明}
+\end{center}
+\par 本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含为获得\kai{\zihao{3}\textbf{\underline{~~~~\schoolName~~~~}}}\song 或其他教育机构的学位或证书而使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示谢意。\\[25pt]
+\par 学位论文作者签名：\hspace{115pt}签字日期：~~~~~~年~~~~~~月~~~~~~日\\[25pt]
+\begin{center}
+    \song\zihao{2}\textbf{学位论文版权使用授权书}
+\end{center}
+\par 本学位论文作者完全了解\kai{\zihao{3}\textbf{\underline{~~~~~\schoolName~~~~~}}}\song 有关保留、使用学位论文的规定，有权保留并向国家有关部门或机构送交论文的复印件和磁盘，允许论文被查阅和借阅。本人授权\kai{\zihao{3}\textbf{\underline{~~~~\schoolName~~~~}}}\song 可以将学位论文的全部或部分内容编入有关数据库进行检索，可以采用影印、缩印或扫描等复制手段保存、汇编学位论文。
+\par （保密的学位论文在解密后适用本授权书）\\[25pt]
+\begin{flushleft}
+学位论文作者签名：\hspace{135pt}导师签名：\\
+签字日期：~~~~~~年~~~~~~月~~~~~~日\hspace{95pt}签字日期：~~~~~~年~~~~~~月~~~~~~日\\
+学位论文作者毕业后去向：\\
+工作单位：\hspace{185pt}电话：\\
+通讯地址：\hspace{185pt}邮编：\\
+\end{flushleft}
+\end{titlepage}
+\thispagestyle{empty}

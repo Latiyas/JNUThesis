@@ -36,278 +36,28 @@
 %% 用geometry宏包设置页边距
 \usepackage[top=2.5cm,bottom=2.0cm,left=2.5cm,right=2.5cm]{geometry}
 \usepackage{etoolbox}
-
-
-%% 设置中文字体
-%% 加载本地中文字体
-\setCJKfamilyfont{song}{simsun.ttc}[AutoFakeSlant,AutoFakeBold={2}]     %% 宋体
-\newcommand{\song}{\CJKfamily{song}}                                    %% 宋体
-\setCJKfamilyfont{hei}{simhei.ttf}[AutoFakeSlant,AutoFakeBold={2}]      %% 黑体
-\newcommand{\hei}{\CJKfamily{hei}}                                      %% 黑体
-\setCJKfamilyfont{kai}{simkai.ttf}[AutoFakeSlant,AutoFakeBold={2}]      %% 楷体
-\newcommand{\kai}{\CJKfamily{kai}}                                      %% 楷体
-\setCJKfamilyfont{li}{SIMLI.TTF}[AutoFakeSlant,AutoFakeBold={2}]        %% 隶书
-\newcommand{\li}{\CJKfamily{li}}                                        %% 隶书
-% %% 如需加载其他中文字体，可以从网上或者C:\Windows\Fonts复制字体文件到根目录下加载即可。
-% \newcommand{\fs}{\CJKfamily{fs}}        %% 仿宋
-% \newcommand{\you}{\CJKfamily{you}}      %% 幼圆
-\setCJKmainfont{simsun.ttc}[AutoFakeSlant,AutoFakeBold={2}]
-%% 设置英文字体
-\setmainfont{Times New Roman}
-\setsansfont{Arial}
-\setmonofont{Times New Roman}
-
-
-%% 重新设置字体大小，行高 = 字体大小 * 1.2
-\newcommand{\wuhao}{\fontsize{10.5pt}{12.6pt}\selectfont}          %% 五号字体
-\newcommand{\xiaosi}{\fontsize{12pt}{14.4pt}\selectfont}           %% 小四字体
-\newcommand{\sihao}{\fontsize{14pt}{16.8pt}\selectfont}            %% 四号字体
-\newcommand{\xiaosan}{\fontsize{15pt}{18pt}\selectfont}            %% 小三字体
-\newcommand{\sanhao}{\fontsize{16pt}{19.2pt}\selectfont}           %% 三号字体
-\newcommand{\xiaoer}{\fontsize{18pt}{21.6pt}\selectfont}           %% 小二字体
-\newcommand{\erhao}{\fontsize{22pt}{26.4pt}\selectfont}            %% 二号字体
-% %% 重置默认字体--小四
-% \renewcommand{\normalsize}{\fontsize{12pt}{14.4pt}\selectfont}
-%% 汉字字距
-\renewcommand{\CJKglue}{\hskip 1pt plus 0.08\baselineskip}
-
-
-%% 修改行距、段距、缩进距离
-%% 行距倍数
-% \renewcommand{\baselinestretch}{1.5}
-\renewcommand{\baselinestretch}{1.625}
-%% 段落间距
-% \setlength{\parskip}{0.3\baselineskip}
-\setlength{\parskip}{0\baselineskip}
-%% 首行缩进
-\usepackage{indentfirst}
-\setlength{\parindent}{2em}     %% 2em代表首行缩进两个字符
-
-
-%% latex超链接
-\usepackage{hyperref}
-%% 引入书签
-\hypersetup{hidelinks,
-	colorlinks=true,
-	allcolors=black,
-	pdfstartview=Fit,
-	breaklinks=true
-}
-
-
-% %% 重设每章结束后的\cleardoublepage命令(twoside)
-% \let\cleardoublepage\clearpage
-% {
-% \let\cleardoublepage\clearpage
-% \include{Chapter M}
-% }
-%% 设置是否打印的参数
-\newif\ifisprint
-\isprintfalse % 设置参数为 true 或 false
-%% 重设每章结束后的\cleardoublepage命令(twoside)
-\ifisprint
-    % 如果不使用该文字，可以不做任何操作
-\else
-    % 在这里添加你想要使用的文字或代码段
-    \let\cleardoublepage\clearpage
-\fi
-
-
-%% 用titlesec宏包设置章节标题
-%% 用titletoc宏包设置章页眉页脚和目录的格式
-\usepackage[indentafter, pagestyles]{titlesec}
-\usepackage{titletoc}
-%% 设置页眉页脚
-\newpagestyle{main}[\wuhao]{
-\sethead[][\titleCn][]{}{\pageHeaderTitle}{}
-\setfoot{}{\thepage}{}
-\setheadrule{0.05pt}
-}
-%% 设置论文默认页眉页脚格式
-\pagestyle{main}
-%% 用\titleformat命令设置章标题的格式
-\titleformat{\chapter}[hang]{\centering\xiaosan\hei}{\thechapter}{1em}{}
-\titleformat{\section}[hang]{\sihao\hei}{\thesection}{0.5em}{}
-\titleformat{\subsection}[hang]{\xiaosi\hei}{\thesubsection}{0.5em}{}
-%% 用\titlespacing或\titlespacing*命令设置标题与四周的距离
-\titlespacing{\chapter}{0pt}{*0}{*5}
-\titlespacing{\section}{0pt}{*1}{*1}
-\titlespacing{\subsection}{0pt}{*0.5}{*0.5}
-
-
-%% 重设目录设置
-\setcounter{tocdepth}{1}
-\titlecontents{chapter}[0pt]{\vspace{0pt}\song\xiaosi}
-    {\thecontentslabel\hspace{1em}}{}
-    {\hspace{0em}\titlerule*[3pt]{$\cdot$}\contentspage}
-\titlecontents{section}[0pt]{\vspace{0pt}\hspace{1em}\song\xiaosi}
-    {\thecontentslabel\hspace{1em}}{}
-    {\hspace{0em}\titlerule*[3pt]{$\cdot$}\contentspage}
-\titlecontents{subsection}[0pt]{\vspace{0pt}\hspace{2em}\song\xiaosi}
-    {\thecontentslabel\hspace{1em}}{}
-    {\hspace{0em}\titlerule*[3pt]{$\cdot$}\contentspage}
-%% 重置目录的名称
-\renewcommand{\contentsname}{目\qquad 录}
-%% 修改图表目录的指引线距离
-\makeatletter
-\def\@dotsep{1} % 默认是4.5，就是点之间距离为4.5mu。可以改成2
-\makeatother
-
-
-%% 图、表、公式编号重置
-\usepackage[labelsep=space]{caption}
-%% 设置控制标签与标题之间的间隔形式
-\renewcommand{\figurename}{图}
-\renewcommand{\tablename}{表}
-%% 设置图, 表的编号为短杠形式
-\renewcommand\thefigure{\arabic{chapter}-\arabic{figure}}
-\renewcommand\thetable{\arabic{chapter}-\arabic{table}}
-%% 设置公式的编号为短杠形式
-\renewcommand\theequation{\thechapter-\arabic{equation}}
-
-
-%% 将默认文献引用设置为上标出现
-\makeatletter
-\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
-\makeatother
-% %% 重新定义非上标的文献引用
-% \newcommand{\norcite}[1]{\scalebox{1.5}[1.5]{\raisebox{-0.75ex}{\cite{#1}}}}
-\newcommand{\norcite}[1]{[\citenum{#1}]}
-
-
-%% 参考文献格式重置，重置参考文献的名称
-\def\thebibliography#1{\chapter*{参\ 考\ 文\ 献}
-    \addcontentsline{toc}{chapter}{参考文献}
-    \thispagestyle{main}
-    \list
-    {[\arabic{enumi}]}{\settowidth\labelwidth{[#1]}\leftmargin\labelwidth
-    \advance\leftmargin\labelsep
-    \usecounter{enumi}}
-    \def\newblock{\hskip .11em plus .33em minus .07em}
-    \sloppy\clubpenalty4000\widowpenalty4000
-    \sfcode`\.=1000\relax
-}
-%% 修改参考文献条目之间的竖直方向上的距离
-\patchcmd{\thebibliography}{\leftmargin\labelwidth}{\leftmargin\labelwidth\addtolength\itemsep{-8pt}}{}{}
-
-
 %% 默认算法环境
 \usepackage{algorithm}
 \usepackage{algorithmic}
-% \usepackage{algorithm2e}
-% \usepackage[linesnumbered,ruled,vlined,boxed,commentsnumbered]{algorithm2e}
-%% 算法环境的重置
-\floatname{algorithm}{算法}
-\renewcommand{\algorithmicrequire}{\textbf{输入:}}
-\renewcommand{\algorithmicensure}{\textbf{输出:}}
-% \renewcommand{\algorithmcfname}{算法}
-% \SetKwInput{KwData}{输入}
-% \SetKwInput{KwResult}{输出}
 
+%% 一些可控的参数
+%% 参数isprint控制是否包含打印时的空白页（默认是false）
+\newif\ifisprint
+\isprintfalse % 设置参数为true或false。如果isprint为false，不包含空白页，方便阅读。这是默认配置。如果为true，输出打印模式下PDF，论文包含必须的空页。
+%% 参数hasappendix控制是否包含附录页（默认是false）
+\newif\ifhasappendix
+\hasappendixfalse % 如果hasappendix为false，不包含附录章节。如果为true，则包含。
 
-%% 中文和英文之间加入波浪符“~”，或“ \ ”
-%% 例如：中文~abc~中文
-%% 中英文混排的时候是用中文标点还是英文标点呢？
-%% 这并没有统一的规范。不过比较合理也比较通行的做法是
-%% 中文后用中文标点，英文后用英文标点
-%% 一般数学文章习惯用全角的实心句点作为中文句号
-%% 全角的中文括号看起来不太好看，可以统一使用英文的括号
-%% 左括号前面和右括号后面最好加上波浪符“~”
-%% 在缩写词后面加上波浪符“~”，如 pp.~100, cf.~something
-%% 定义符合中文习惯的定理环境
-\newtheoremstyle{mythm}{1.5ex plus 1ex minus .2ex}{1.5ex plus 1ex minus .2ex}{\kai}{\parindent}{\song\bfseries}{}{1em}{}
-\theoremstyle{mythm}
-\newtheorem{thm}{定理~}[chapter]
-\newtheorem{lem}{引理~}
-\newtheorem{prop}{命题~}
-\newtheorem{cor}{推论~}
-\newtheorem{defn}{定义~}
-\newtheorem{conj}{猜想~}
-\newtheorem{exmp}{例~}
-\newtheorem{rem}{注~}
-\newtheorem{notation}{记号~}
+% 模板配置文件
+\input{chapter/theme}
 
-\newtheoremstyle{specthm}{1.5ex plus 1ex minus .2ex}{1.5ex plus 1ex minus .2ex}{\kai}{\parindent}{\song\bfseries}{}{1em}{\thmnote{#3}}
-\theoremstyle{specthm}
-\newtheorem{sthm}[thm]{}
-%% 例如：
-%% \begin{sthm}[定理~\thethm~(存在性定理)]
-%% 定理内容
-%% \end{sthm}
-%% 定义符合中文习惯的证明环境
-\makeatletter
-\renewenvironment{proof}[1][\proofname]{\par
-    \pushQED{\qed}%
-    \normalfont \topsep6\p@\@plus6\p@ \labelsep1em\relax
-    \trivlist
-    \item[\hskip\labelsep\indent
-        \bfseries #1]\ignorespaces
-}{%
-    \popQED\endtrivlist\@endpefalse
-}
-\makeatother
-
-\renewcommand{\proofname}{证明}
-%% proof环境会自动在证明最后一行的最右边加上一个证明结束符
-%% 默认为空心方块，可以重新定义 \qedsymbol 来修改它
-%% 需要注意的是，当证明以一个独立公式结束时
-%% 证明结束符会出现在下一行的最右边，而不是在公式的同一行上
-%% 这不合乎习惯。这时只要在公式环境内加上 \qedhere 即可
-
-
-% 声明信息
-\input{chapter/declaration}
 % 额外的宏包
 \input{chapter/libs}
 
 
 \begin{document}
 %% 前言
-%%-------------------标题页--------------------
-\begin{titlepage}
-\begin{flushleft}
-    \zihao{-1}\li\textbf{暨南大学硕士学位论文}
-\end{flushleft}
-\begin{flushleft}
-\vspace{25pt}
-\xiaosan{
-题名： \titleCn \\
-Title： \titleEn \\[25pt]
-作者姓名：\authorName \\[25pt]
-指导教师姓名及学位、职称：\tutor \\[25pt]
-学科、专业名称：\disciplineName \\[25pt]
-学位类型：\degreeType \\[25pt]
-论文提交时间：\commitDate \\[25pt]
-论文答辩时间：\replyDate \\[25pt]
-答辩委员会主席：\programCoChairs \\[25pt]
-论文评阅人：\Reviewer \\[25pt]
-学位授予单位和日期：\schoolName \quad \grantDate \\[25pt]
-}
-\end{flushleft}
-\end{titlepage}
-\thispagestyle{empty}
-
-%%-------------------声明页--------------------
-\begin{titlepage}
-\begin{center}
-    \zihao{2}\song\textbf{独~创~性~声~明}
-\end{center}
-\par 本人声明所呈交的学位论文是本人在导师指导下进行的研究工作及取得的研究成果。除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含为获得\kai{\zihao{3}\textbf{\underline{~~~~\schoolName~~~~}}}\song 或其他教育机构的学位或证书而使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示谢意。\\[25pt]
-\par 学位论文作者签名：\hspace{115pt}签字日期：~~~~~~年~~~~~~月~~~~~~日\\[25pt]
-\begin{center}
-    \song\zihao{2}\textbf{学位论文版权使用授权书}
-\end{center}
-\par 本学位论文作者完全了解\kai{\zihao{3}\textbf{\underline{~~~~~\schoolName~~~~~}}}\song 有关保留、使用学位论文的规定，有权保留并向国家有关部门或机构送交论文的复印件和磁盘，允许论文被查阅和借阅。本人授权\kai{\zihao{3}\textbf{\underline{~~~~\schoolName~~~~}}}\song 可以将学位论文的全部或部分内容编入有关数据库进行检索，可以采用影印、缩印或扫描等复制手段保存、汇编学位论文。
-\par （保密的学位论文在解密后适用本授权书）\\[25pt]
-\begin{flushleft}
-学位论文作者签名：\hspace{135pt}导师签名：\\
-签字日期：~~~~~~年~~~~~~月~~~~~~日\hspace{95pt}签字日期：~~~~~~年~~~~~~月~~~~~~日\\
-学位论文作者毕业后去向：\\
-工作单位：\hspace{185pt}电话：\\
-通讯地址：\hspace{185pt}邮编：\\
-\end{flushleft}
-\end{titlepage}
-\thispagestyle{empty}
+\include{chapter/declaration}
 
 %% 摘要
 \include{chapter/abstract}
@@ -334,57 +84,22 @@ Title： \titleEn \\[25pt]
 %% 正文部分
 %% 重置各级标题的字体和字号
 \mainmatter
-%% 设置章节格式（一倍行距为字体大小 × 1.297(1.3) × 1.25）
-\ctexset{chapter={
-        name = {},
-        number = {\arabic{chapter}},
-        format = {\bfseries \sffamily \hei \centering \zihao{-3}},
-        beforeskip = 15pt,
-        afterskip = 25pt,
-        fixskip = true,
-        aftername = ~~~~,
-    }
-}
-%% 设置一级章节格式
-\ctexset{section={
-        format = {\bfseries \sffamily \hei \raggedright \zihao{4}},
-        beforeskip = 25pt,
-        afterskip = 20pt,
-        fixskip = true,
-    }
-}
-%% 设置二级标题格式 
-\ctexset{subsection={
-        format = {\bfseries \sffamily \hei \raggedright \zihao{-4}},
-        beforeskip = 20pt,
-        afterskip = 20pt,
-        fixskip = true,
-    }
-}
-%% 设置三节标题格式
-\ctexset{subsubsection={
-        format = {\bfseries \sffamily \hei \raggedright \zihao{-4}},
-        beforeskip = 20pt,
-        afterskip = 20pt,
-        fixskip = true,
-    }
-}
 
 %% 论文正文部分，在chaps.tex内编辑
 \input{chapter/chaps}
 
 %% 参考文献引入
-%% 暨大参考文献设置
-% \bibliographystyle{thubib}
-% 参考文献设置-GB
+%% 暨大参考文献设置，文献著录格式参考《GB/T 7714-2015》
 \bibliographystyle{gbt7714-2015}
 \bibliography{bib/refs}
 
 %% 攻读学位期间发表的论文
 \include{chapter/papers}
 
-%% 附录
-\include{chapter/appendix}
+%% 附录（默认不包含，参数hasappendix控制）
+\ifhasappendix
+    \include{chapter/appendix}
+\fi
 
 %% 致谢
 \include{chapter/acknowledgement}
