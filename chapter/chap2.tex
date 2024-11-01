@@ -44,7 +44,7 @@ LaTeX基本命令使用教程：https://blog.csdn.net/gentleman\_qin/article/det
     \subfloat[图片4。]{
         \includegraphics[width = 0.45\textwidth]{example-image}
     }
-    \caption{多个黑洞}
+    \caption{多张图片}
     \label{fig:blackhole2}
 \end{figure*}
 图~\ref{fig:blackhole2}是多个黑洞图片并列。
@@ -140,7 +140,7 @@ LaTeX基本命令使用教程：https://blog.csdn.net/gentleman\_qin/article/det
 
 \section{文献引用}
 
-默认的参考文献引用方法是$\backslash$cite\{\}~\cite{broder1997resemblance,broder1997syntactic}，也可以使用非上标的引用形式$\backslash$norcite\{\}~\norcite{broder1997resemblance}。
+默认的参考文献引用方法是$\backslash$cite\{\}，例如一些文献~\cite{kearns1994introduction,shalev2014understanding}。也可以使用非上标的引用形式$\backslash$norcite\{\}，例如，论文~\norcite{mohri2018foundations}。
 
 
 \section{关于参考文献的一些格式问题}
@@ -177,7 +177,7 @@ LaTeX基本命令使用教程：https://blog.csdn.net/gentleman\_qin/article/det
 
 \begin{table}[!t]
 \centering
-\caption[这是表目录中的标题]{这是正文中表格的标题，也可以正常使用引用论文\cite{broder1997resemblance}。}
+\caption[这是表目录中的标题]{这是正文中表格的标题，也可以正常使用引用论文\cite{kearns1994introduction}。}
 \begin{tabular}{ccc}
     \toprule
     序号 & 姓名 & 薪水 \\
