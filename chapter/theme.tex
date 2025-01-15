@@ -81,6 +81,13 @@
 \titleformat{\section}[hang]{\sihao\hei}{\thesection}{0.5em}{}
 \titleformat{\subsection}[hang]{\xiaosi\hei}{\thesubsection}{0.5em}{}
 \titleformat{\subsubsection}[hang]{\xiaosi\hei}{\thesubsubsection}{0.5em}{}
+%% 修改目录中章节标题样式
+\ctexset{
+    chapter={
+    name={}, % 章节标题不加“第”和“章”
+    number=\arabic{chapter}, % 使用阿拉伯数字
+    }
+}
 %% 用\titlespacing或\titlespacing*命令设置标题与四周的距离
 \titlespacing{\chapter}{0pt}{*0}{*5}
 \titlespacing{\section}{0pt}{*1}{*1}
@@ -157,23 +164,25 @@
 %% 定义符合中文习惯的定理环境
 \newtheoremstyle{mythm}{1.5ex plus 1ex minus .2ex}{1.5ex plus 1ex minus .2ex}{\kai}{\parindent}{\song\bfseries}{}{1em}{}
 \theoremstyle{mythm}
-\newtheorem{thm}{定理~}[chapter]
+\newtheorem{theo}{定理~}[chapter]
 \newtheorem{lem}{引理~}
 \newtheorem{prop}{命题~}
 \newtheorem{cor}{推论~}
-\newtheorem{defn}{定义~}
+\newtheorem{defi}{定义~}
 \newtheorem{conj}{猜想~}
 \newtheorem{exmp}{例~}
 \newtheorem{rem}{注~}
-\newtheorem{notation}{记号~}
+\newtheorem{nota}{记号~}
 
 \newtheoremstyle{specthm}{1.5ex plus 1ex minus .2ex}{1.5ex plus 1ex minus .2ex}{\kai}{\parindent}{\song\bfseries}{}{1em}{\thmnote{#3}}
 \theoremstyle{specthm}
-\newtheorem{sthm}[thm]{}
+%% 旧版本（后期可删）
+%% \newtheorem{sthm}[theo]{}
 %% 例如：
-%% \begin{sthm}[定理~\thethm~(存在性定理)]
+%% \begin{sthm}[定理~\thetheo~(存在性定理)]
 %% 定理内容
 %% \end{sthm}
+
 %% 定义符合中文习惯的证明环境
 \makeatletter
 \renewenvironment{proof}[1][\proofname]{\par

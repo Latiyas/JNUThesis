@@ -21,9 +21,9 @@ LaTeX基本命令使用教程：https://blog.csdn.net/gentleman\_qin/article/det
     \centering
     \includegraphics[width=2.5in]{images/blackhole.jpeg}
     \caption{黑洞}
-    \label{fig:blackhole1}
+    \label{fig:blackhole}
 \end{figure}
-图~\ref{fig:blackhole1}是单个黑洞图片。
+图~\ref{fig:blackhole}是关于黑洞的图片。
 
 \subsection{多张图片示例}
 
@@ -45,9 +45,9 @@ LaTeX基本命令使用教程：https://blog.csdn.net/gentleman\_qin/article/det
         \includegraphics[width = 0.45\textwidth]{example-image}
     }
     \caption{多张图片}
-    \label{fig:blackhole2}
+    \label{fig:example}
 \end{figure*}
-图~\ref{fig:blackhole2}是多个黑洞图片并列。
+图~\ref{fig:example}是多张图片的并列。
 
 
 \section{表格}
@@ -72,20 +72,19 @@ LaTeX基本命令使用教程：https://blog.csdn.net/gentleman\_qin/article/det
 
 \section{简单的数学公式和定理}
 
-\begin{sthm}[定理~\thethm~(存在性定理)]
-    $\Gamma\Theta\Lambda\Xi\Pi\alpha\beta\gamma\delta$
-\end{sthm}
+一些基本的数学符号：$\Gamma\Theta\Lambda\Xi\Pi\alpha\beta\gamma\delta$。
 
-\begin{thm}
+\begin{theo} [存在性定理]
 \label{thm:alpha}
     xxxxx
-\end{thm}
+\end{theo}
+
+定理~\ref{thm:alpha}如上所示。公式~\ref{eq:alpha}如下所示。
 
 \begin{equation}
 \label{eq:alpha}
     \alpha=\sqrt[n]{\Re}.
 \end{equation}
-定理\ref{thm:alpha}，公式\ref{eq:alpha}。
 
 
 \section{伪代码实例}
@@ -140,7 +139,9 @@ LaTeX基本命令使用教程：https://blog.csdn.net/gentleman\_qin/article/det
 
 \section{文献引用}
 
-默认的参考文献引用方法是$\backslash$cite\{\}，例如一些文献~\cite{kearns1994introduction,shalev2014understanding}。也可以使用非上标的引用形式$\backslash$norcite\{\}，例如，论文~\norcite{mohri2018foundations}。
+默认的参考文献引用方法是$\backslash$cite\{\}，例如一些文献~\cite{kearns1994introduction,shalev2014understanding}。
+
+也可以使用非上标的引用形式$\backslash$norcite\{\}，例如，论文~\norcite{mohri2018foundations}提出了。。。
 
 
 \section{关于参考文献的一些格式问题}
@@ -150,15 +151,25 @@ LaTeX基本命令使用教程：https://blog.csdn.net/gentleman\_qin/article/det
 对于中文文献，建议增加参数“language={zh}”。对于超过3个作者以上的中文参考文献，第四位及以后的作者需要被省略，并增加“等”字。这个参数能够规避中文参考文献中出现“et al.”的错误。
 
 例如接下来的这个文献：
+
 @article\{郑一力2017,
-  title=\{基于多特征降维的植物叶片识别方法\},
-  author=\{郑一力 and 钟刚亮 and 王强 and 赵玥 and 赵燕东\},
-  journal=\{农业机械学报\},
-  volume=\{48\},
-  number=\{3\},
-  pages=\{30--37\},
-  year=\{2017\},
-  \textbf{language=\{zh\}}
+
+  \hspace{2em} title=\{基于多特征降维的植物叶片识别方法\},
+  
+  \hspace{2em} author=\{郑一力 and 钟刚亮 and 王强 and 赵玥 and 赵燕东\},
+  
+  \hspace{2em} journal=\{农业机械学报\},
+  
+  \hspace{2em} volume=\{48\},
+  
+  \hspace{2em} number=\{3\},
+  
+  \hspace{2em} pages=\{30--37\},
+  
+  \hspace{2em} year=\{2017\},
+  
+  \hspace{2em} \textbf{language=\{zh\}}
+  
 \}
 
 \subsection{关于英文姓名的大小写问题}
@@ -168,14 +179,14 @@ LaTeX基本命令使用教程：https://blog.csdn.net/gentleman\_qin/article/det
 
 考虑到部分同学可能有特殊需要，如果希望格式改成首字母大写其余小写的形式，可以在gbt7714-2015.bst文件中第637行的“"u" change.case\$ 'lastname :=”改成“"t" change.case\$ 'lastname :=”即可。
 
-在本条目更新之前，一些同学已经发现了这个小诀窍，为他们的聪明才智鼓掌。
+在本条目更新之前，一些同学已经发现了这个小诀窍，为大家的聪明才智鼓掌。
 
 
 \section{关于图、表标题的一些其他应用}
 
 如果在图片、表格的标题中需要用到较长的内容解释结果，或者内容中包含引用，建议使用``$\backslash$caption[<短标题>]\{<长标题>\}''命令。可选的参数短标题用于图表目录，而长标题中可以进行长达多段的叙述。而标签$\backslash$label需要放在caption后面，或者短标题或长标题中。实际效果如下表所示：
 
-\begin{table}[!t]
+\begin{table}[!ht]
 \centering
 \caption[这是表目录中的标题]{这是正文中表格的标题，也可以正常使用引用论文\cite{kearns1994introduction}。}
 \begin{tabular}{ccc}

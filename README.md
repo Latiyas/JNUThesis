@@ -13,6 +13,7 @@ JNUThesis
 本项目的主要工作是将Yongtao Zhou学长的暨南大学博硕士学位论文LaTeX模板迁移至Overleaf，同时根据同学们的反馈对格式继续进行完善。原始项目见[JNUMasterThesis](https://github.com/ytZhou/JNUMasterThesis)，再次感谢Yongtao Zhou学长前期的大量工作。参考文献借鉴了南京大学的Haixing Hu学长的项目，详情见[GBT7714-2005-BibTeX-Style](https://github.com/Haixing-Hu/GBT7714-2005-BibTeX-Style)。感谢Haixing Hu学长的工作。由于近几年又发布了新版的参考文献著录格式，自2024年起，本模板的参考文献标准将全部更新到《[GB/T 7714-2015: 信息与文献 参考文献著录规则](https://wjk.usst.edu.cn/2020/0523/c10336a220878/page.htm)》。精简版手册请查看知乎文章《[参考文献著录格式（国标GB/T 7714-2015）](https://zhuanlan.zhihu.com/p/355312827?ivk_sa=1024320u)》
 
 本项目虽然侧重于在Overleaf上进行编译测试，但同样能够在本地Latex上的编译通过。部分同学也反映，本地编译的结果是正常的。由于作者精力有限，暂时没有余力对本地编译的所有问题进行一一排查，请有问题的同学自行百度解决。本项目在Overleaf网站上的共享链接为[https://cn.overleaf.com/read/pwvngpvxfxdd](https://cn.overleaf.com/read/pwvngpvxfxdd)，愿意使用Overleaf平台的同学可以直接拷贝本项目的Overleaf版或者上传Github项目到Overleaf上进行修改即可。
+注：暨南大学经济学院参考文献使用著者-出版年编码形式，该需求在新的项目中得到了相应支持[https://www.overleaf.com/2694553891dqmjbwrcttgp#7d5a1e](https://www.overleaf.com/2694553891dqmjbwrcttgp#7d5a1e)。
 
 PS: 论文模板的第二章包含了作者总结的常用的LaTex代码。这源于作者的经验以及部分用户的反馈中薄弱的部分，强烈建议用户在快速阅读一遍后再进行论文的撰写。当用到这些功能时，欢迎您能回到这里寻找灵感。
 
@@ -65,6 +66,10 @@ PPS: 由于作者精力有限，对于同学们反映的一些小问题，一般
 
 已修复问题
 --------------------------------------------------------
+2025.01.05更新
+1. 修改了目录中标题的问题。（感谢Xiaoman Wang同学的帮助）
+2. 修改了定理环境。命名由英文前三或四个字母决定，保留常用的一些定义，并更新了相应示例。
+
 2024.10.31更新
 1. 增加了第四级标题，在伪代码编号上增加了章节号。（感谢Qi Hao同学的帮助）
 2. 调整了枚举列表的默认距离。
