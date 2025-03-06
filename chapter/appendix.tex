@@ -1,6 +1,22 @@
+\thispagestyle{main}
 \chapter*{附\texorpdfstring{\qquad}{} 录}\addcontentsline{toc}{chapter}{附录}
 \thispagestyle{main}
 
-\section*{附录1}
+% 使目录中不显示任何内容
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
 
-使用$\backslash$section*$\{$附录1$\}$可以确保，标题上不会产生序号，并且不会在前面的主目录上出现索引。
+\refstepcounter{chapter}    % 手动增加章节计数
+\refstepcounter{section}    % 手动增加小节计数
+\setcounter{section}{0}     % 重置小节计数
+
+% 手动修改章节编号
+\renewcommand{\thechapter}{A} 
+
+\section{附录1}
+
+% 使用$\backslash$section*$\{$附录1$\}$可以确保，标题上不会产生序号，并且不会在前面的主目录上出现索引。也可以在subsection上进行类似的操作。
+
+这是附录内容。
+
+% 使后续目录仅包含章节
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}

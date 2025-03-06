@@ -215,3 +215,11 @@ LaTeX基本命令使用教程：https://blog.csdn.net/gentleman\_qin/article/det
 在表~\ref{tab:example}中，引用如果放在了短标题中，会在正文前先对引用进行编号，导致引用排序出现问题，望知晓。
 
 此外，部分作者可能会遇到需要对图或表进行更详细说明的情况。在这个示例中，增加了文本框以实现对表格的更多解释，供同学们参考。
+
+% \subsection{引用附录中的章节}
+
+% 通过引入新的自定义命令，$\backslash$newcommand\{$\backslash$appref\}[2]\{$\backslash$hyperref[\#2]\{\#1\}\}，可以手动实现对附录的引用。
+
+% 在需要引用的地方，使用命令：$\backslash$appref\{``显示的标题''\}\{``引用编号''\}即可显示出想要的结果。
+
+% PS：有点复杂，但是目前没有找到更好的解决方案。
