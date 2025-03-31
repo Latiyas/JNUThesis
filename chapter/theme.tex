@@ -15,22 +15,27 @@
 % \setCJKfamilyfont{li}{SIMLI.TTF}[AutoFakeSlant,AutoFakeBold={2}]        %% 隶书
 % \newcommand{\li}{\CJKfamily{li}}                                        %% 隶书
 \setCJKfamilyfont{song}{SourceHanSerif-Regular.ttf}[AutoFakeSlant,AutoFakeBold={2}]     %% 宋体
-\newcommand{\song}{\CJKfamily{song}}                                    %% 宋体
-\setCJKfamilyfont{hei}{SourceHanSans-Regular.otf}[AutoFakeSlant,AutoFakeBold={2}]      %% 黑体
-\newcommand{\hei}{\CJKfamily{hei}}                                      %% 黑体
+\newcommand{\song}{\CJKfamily{song}}                                                    %% 宋体
+\setCJKfamilyfont{hei}{SourceHanSans-Regular.otf}[AutoFakeSlant,AutoFakeBold={2}]       %% 黑体
+\newcommand{\hei}{\CJKfamily{hei}}                                                      %% 黑体
 \setCJKfamilyfont{kai}{AlibabaPuHuiTi-Regular.ttf}[AutoFakeSlant,AutoFakeBold={2}]      %% 楷体
-\newcommand{\kai}{\CJKfamily{kai}}                                      %% 楷体
-\setCJKfamilyfont{li}{MaShanZheng-Regular.ttf}[AutoFakeSlant,AutoFakeBold={2}]        %% 隶书
-\newcommand{\li}{\CJKfamily{li}}                                        %% 隶书
+\newcommand{\kai}{\CJKfamily{kai}}                                                      %% 楷体
+\setCJKfamilyfont{li}{MaShanZheng-Regular.ttf}[AutoFakeSlant,AutoFakeBold={2}]          %% 隶书
+\newcommand{\li}{\CJKfamily{li}}                                                        %% 隶书
 % %% 如需加载其他中文字体，可以从网上或者C:\Windows\Fonts复制字体文件到根目录下加载即可。
 % \newcommand{\fs}{\CJKfamily{fs}}        %% 仿宋
 % \newcommand{\you}{\CJKfamily{you}}      %% 幼圆
 \setCJKmainfont{SourceHanSerif-Regular.ttf}[AutoFakeSlant,AutoFakeBold={2}]
 \setCJKsansfont{SourceHanSerif-Regular.ttf}[AutoFakeSlant,AutoFakeBold={2}]
 %% 设置英文字体
+\usepackage{unicode-math}
+\setmathfont{XITS Math} % 设置数学字体为Times New Roman
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
 \setmonofont{Times New Roman}
+% %% 数学字体替代方案
+% \usepackage{mathptmx}  % 设置数学字体为Times New Roman
+% \usepackage[T1]{fontenc} % 确保字体编码正确
 
 
 %% 重新设置字体大小，行高 = 字体大小 * 1.2
@@ -135,8 +140,10 @@
 \renewcommand\theequation{\thechapter-\arabic{equation}}
 \renewcommand\thealgorithm{\thechapter-\arabic{algorithm}}
 %% 设置公式上下间距
-\setlength{\abovedisplayskip}{-10pt} % 公式上方的间距
-\setlength{\belowdisplayskip}{-10pt} % 公式下方的间距
+\setlength{\abovedisplayskip}{0pt}      % 控制正文到公式的上间距
+\setlength{\belowdisplayskip}{0pt}      % 控制正文到公式的下间距
+% \setlength{\abovedisplayshortskip}{0pt} % 控制公式之间的上间距
+% \setlength{\belowdisplayshortskip}{0pt} % 控制公式之间的下间距
 
 
 

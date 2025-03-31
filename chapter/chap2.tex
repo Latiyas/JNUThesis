@@ -3,6 +3,28 @@
 \thispagestyle{main}
 
 
+\section{字体设置}
+
+在这个模板中，涉及到的中文字体包括宋体，黑体，楷体以及隶书。由于本项目面向整个互联网，因此这里使用的字体都是免费开源的。
+
+尽管笔者尝试选择了最接近的字体，但难免会存在一些细微的区别。对一些要求较高的同学，可以自行寻找一些允许个人免费使用的字体。比如在Windows系统中，``C:$\backslash$Windows$\backslash$Fonts''文件夹下就有一些可用的字体文件。具体的对应关系如下：
+\begin{table}[!ht]
+\centering
+\caption{字体信息}
+\begin{tabular}{ccll}
+    \toprule
+    序号 & 字体类型 & 字体文件       & 项目中的字体定义  \\
+    \midrule
+    1   & 宋体    & simsun.ttc    & $\backslash$song  \\
+    2   & 黑体    & simhei.ttf    & $\backslash$hei   \\
+    3   & 楷体    & simkai.ttf    & $\backslash$kai   \\
+    4   & 隶书    & SIMLI.TTF     & $\backslash$li    \\
+    \bottomrule
+\end{tabular}
+\end{table}
+理论上，将新的字体文件放入主目录中，并将./chapter/theme.tex中使用的字体文件进行替换即可。
+
+
 \section{一些有用的工具}
 
 LaTeX基本命令使用教程：https://blog.csdn.net/gentleman\_qin/article/details/79963396。
