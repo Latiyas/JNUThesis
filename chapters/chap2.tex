@@ -22,7 +22,19 @@
     \bottomrule
 \end{tabular}
 \end{table}
-理论上，将新的字体文件放入主目录中，并将./chapter/theme.tex中使用的字体文件进行替换即可。
+理论上，将新的字体文件放入主目录中，并对./configs/theme.tex中的命令进行修改即可。需要修改的命令如下所示：
+
+$\backslash$setCJKfamilyfont\{song\}\{\lm{simsun.ttc}\}[Path=fonts/,AutoFakeSlant,AutoFakeBold=\{2\}]；
+
+$\backslash$setCJKfamilyfont\{hei\}\{\lm{simhei.ttf}\}[Path=fonts/,AutoFakeSlant,AutoFakeBold=\{2\}]；
+
+$\backslash$setCJKfamilyfont\{kai\}\{\lm{simkai.ttf}\}[Path=fonts/,AutoFakeSlant,AutoFakeBold=\{2\}]；
+
+$\backslash$setCJKfamilyfont\{li\}\{\lm{SIMLI.TTF}\}[Path=fonts/,AutoFakeSlant,AutoFakeBold=\{2\}]；
+
+$\backslash$setCJKmainfont\{\lm{simsun.ttc}\}[Path=fonts/,AutoFakeSlant,AutoFakeBold=\{2\}]；
+
+$\backslash$setCJKsansfont\{\lm{simsun.ttc}\}[Path=fonts/,AutoFakeSlant,AutoFakeBold=\{2\}]。
 
 
 \section{一些有用的工具}

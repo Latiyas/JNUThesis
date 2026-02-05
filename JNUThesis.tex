@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Author: Ming Li
-%% Time: 2022-7-18
-%% Note: Overleaf版本，非官方模板。
+%% Time: 2026-02-05
+%% Note: Texpage版本，非官方模板。
 %% https://github.com/Latiyas/JNUThesis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,18 +49,18 @@
 \hasappendixfalse % 如果hasappendix为false，不包含附录章节。如果为true，则包含。
 
 % 模板配置文件
-\input{chapter/theme}
+\input{configs/theme}
 
 % 额外的宏包
-\input{chapter/libs}
+\input{configs/libs}
 
 
 \begin{document}
 %% 前言
-\include{chapter/declaration}
+\include{chapters/declaration}
 
 %% 摘要
-\include{chapter/abstract}
+\include{chapters/abstract}
 
 %% 生成目录
 \tableofcontents
@@ -86,7 +86,7 @@
 \mainmatter
 
 %% 论文正文部分，在chaps.tex内编辑
-\input{chapter/chaps}
+\input{chapters/chaps}
 
 %% 参考文献引入
 %% 暨大参考文献设置，文献著录格式参考《GB/T 7714-2015》
@@ -94,15 +94,15 @@
 \bibliography{bib/refs}
 
 %% 攻读学位期间发表的论文
-\include{chapter/papers}
+\include{chapters/papers}
 
 %% 附录（默认不包含，参数hasappendix控制）
 \ifhasappendix
-    \include{chapter/appendix}
+    \include{chapters/appendix}
 \fi
 
 %% 致谢
-\include{chapter/acknowledgement}
+\include{chapters/acknowledgement}
 %% 加入\newpage能使最后一页也有页眉
 \newpage
 \end{document}
