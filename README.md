@@ -7,7 +7,7 @@ JNUThesis
 # 注意（非常重要）
 --------------------------------------------------------
 1. 由于本项目是开源的，所以使用的字体文件也都来源于网络上的免费字体，与常用的Windows字体存在一些差异。Windows系统中字体文件默认都放在"C:\Windows\Fonts"文件夹下，可以自行寻找并替换本项目。具体的操作方法，请参考原始项目或JNUThesis.pdf中第2.1节的内容。
-2. 由于Overleaf网站在经历数轮升级后，免费账户的实际可编译内容似乎被（暗中）缩短，因此将项目转移至国产的TexPage网站上。目前项目在TexPage上运行良好，且目前（2026年02月）可编译内容与早期的Overleaf相近，会员价格也便宜。国产赛高！！！
+2. 由于Overleaf网站在经历数轮升级后，免费账户的实际可编译内容似乎被（暗中）缩短，因此将项目转移至国产的TexPage网站上。目前（2026年02月）项目在TexPage上运行良好，且可编译内容与早期的Overleaf相近，会员价格也便宜。国产赛高！！！
 3. 后续版本（可能的）更新会放在Github与TexPage上，Overleaf上的项目仅供考古，链接如下：[JNUThesis_Overleaf](https://cn.overleaf.com/read/pwvngpvxfxdd)；[JNUThesis(V2.0)_Overleaf](https://cn.overleaf.com/read/ppgmhpbytsss#79bd7f)。）
 
 
